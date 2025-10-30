@@ -1,0 +1,13 @@
+{
+  "name": "FrontEnd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "tw": "tailwindcss -i wwwroot/css/app.css -o wwwroot/css/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}
