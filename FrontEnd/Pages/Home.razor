@@ -4,18 +4,50 @@
 
 <div class="w-full h-full flex flex-row bg-[#747474]">
     @* left panel *@
-    <div class="h-full basis-1/6 flex flex-col border-r-2 border-r-white px-2">
+    <div class="h-full basis-1/6 shrink-0 flex flex-col border-r-2 border-r-white">
         @* tool bar *@
-        <div class="basis-1/18">
+        <div class="basis-1/18 shrink-0">
 
         </div>
         @* explorer *@
-        <div class="basis-10/18 border-1 border-[#A4A4A4] bg-[#5B5B5B]">
+        <div class="basis-10/18 shrink-0 border-1 border-[#A4A4A4] bg-[#5B5B5B] mx-2">
 
         </div>
         @* alerts *@
-        <div class="basis-7/18 px-2">
-            <div class="top-header">Alerts</div>
+        <div class="basis-7/18 shrink-0 flex flex-col h-full min-h-0"> 
+            <div class="top-header mx-4">Alerts</div>
+            <div class="grow-1 overflow-y-scroll flex flex-col gap-y-1">
+                @* card *@
+                <div class="flex flex-col bg-[#F2F2F2] rounded-md mx-2 px-2 pb-2">
+                    <div class="mt-1 text-[10px] font-light">10-20-2030</div>
+                    <div class="font-semibold text-sm">Deadline Exceeded - #123</div>
+                    <div class="mt-1 text-sm/4 font-light">Task exceeded deadline — automatically extended in accordance with configured settings.</div>
+                </div>
+                @* card *@
+                <div class="flex flex-col bg-[#B5B5B5] rounded-md mx-2 px-2 pb-2">
+                    <div class="mt-1 text-[10px] font-light">10-20-2030</div>
+                    <div class="font-semibold text-sm">Completed Ahead of Time - #123</div>
+                    <div class="mt-1 text-sm/4 font-light">Task completed ahead of deadline — schedule and dependencies updated accordingly.</div>
+                </div>
+                @* card *@
+                <div class="flex flex-col bg-[#B5B5B5] rounded-md mx-2 px-2 pb-2">
+                    <div class="mt-1 text-[10px] font-light">10-20-2030</div>
+                    <div class="font-semibold text-sm">Adjusted Schedule - #123</div>
+                    <div class="mt-1 text-sm/4 font-light">All related tasks have been adjusted to reflect new timelines and completion statuses.</div>
+                </div>
+                @* card *@
+                <div class="flex flex-col bg-[#B5B5B5] rounded-md mx-2 px-2 pb-2">
+                    <div class="mt-1 text-[10px] font-light">10-20-2030</div>
+                    <div class="font-semibold text-sm">Completed Ahead of Time - #123</div>
+                    <div class="mt-1 text-sm/4 font-light">Task completed ahead of deadline — schedule and dependencies updated accordingly.</div>
+                </div>
+                @* card *@
+                <div class="flex flex-col bg-[#B5B5B5] rounded-md mx-2 px-2 pb-2">
+                    <div class="mt-1 text-[10px] font-light">10-20-2030</div>
+                    <div class="font-semibold text-sm">Adjusted Schedule - #123</div>
+                    <div class="mt-1 text-sm/4 font-light">All related tasks have been adjusted to reflect new timelines and completion statuses.</div>
+                </div>
+            </div>
         </div>
     </div>
     @* right panel *@
@@ -138,15 +170,44 @@
             </div>
             @* personnel *@
             <div class="basis-2/9 px-3">
-                <div class="top-header">Assigned Personnel</div>
+                <div class="flex flex-row items-center gap-x-3">
+                    <div class="top-header">Assigned Personnel</div>
+                    <img src="icons/add.svg" class="w-8 h-8" />
+                </div>
+                <div class="flex flex-row items-end text-white text-xs gap-x-2">
+                    <div>Notify Days Before</div>
+                    <div class="flex flex-col">
+                        <div>3</div>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="flex flex-col">
+                        <div>2</div>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="flex flex-col">
+                        <div>1</div>
+                        <input type="checkbox" />
+                    </div>
+                    <div class="flex flex-col">
+                        <div>0</div>
+                        <input type="checkbox" />
+                    </div>
+                    <input type="text" class="border-2 border-white rounded-[6px] px-2 py-0 w-7 h-6" />
+                </div>
             </div>
             @* checklist *@
             <div class="basis-2/9 px-3">
-                <div class="top-header">Checklists</div>
+                <div class="flex flex-row items-center gap-x-3">
+                    <div class="top-header">Checklists</div>
+                    <img src="icons/add.svg" class="w-8 h-8" />
+                </div>
             </div>
             @* notes *@
             <div class="basis-2/9 px-3">
-                <div class="top-header">Notes Board</div>
+                <div class="flex flex-row items-center gap-x-3">
+                    <div class="top-header">Notes Board</div>
+                    <img src="icons/add.svg" class="w-8 h-8" />
+                </div>
             </div>
         </div>
     </div>
