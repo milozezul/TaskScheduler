@@ -1,4 +1,153 @@
 ﻿@page "/"
 
 <PageTitle>Home</PageTitle>
-<h1>Test</h1>
+
+<div class="w-full h-full flex flex-row bg-[#747474]">
+    @* left panel *@
+    <div class="h-full basis-1/6 flex flex-col border-r-2 border-r-white px-2">
+        @* tool bar *@
+        <div class="basis-1/18">
+
+        </div>
+        @* explorer *@
+        <div class="basis-10/18 border-1 border-[#A4A4A4] bg-[#5B5B5B]">
+
+        </div>
+        @* alerts *@
+        <div class="basis-7/18 px-2">
+            <div class="top-header">Alerts</div>
+        </div>
+    </div>
+    @* right panel *@
+    <div class="h-full basis-5/6 flex flex-col">
+        @* task header *@
+        <div class="basis-2/18 px-6">
+            <div class="top-header">Sapphire App</div>
+        </div>
+        @* gantt chart *@
+        <div class="basis-9/18 border-2 border-white">
+
+        </div>
+        @* settings *@
+        <div class="basis-7/18 flex flex-row">
+            @* main task settings *@
+            <div class="basis-3/9 border-r-2 border-r-white px-6">
+
+                @* task title *@
+                <div class="flex flex-row items-center mt-3 gap-x-3">
+                    <input type="color" class="w-6 h-7" />
+                    <div class="font-normal text-white text-base">#1 Inspection</div>
+                    <img src="icons/success.svg" class="w-5 h-5" />
+                </div>
+
+                @* task type *@
+                <div class="flex flex-row items-center gap-x-3 text-white text-sm font-light mt-3">
+                    <input type="radio" id="tasktype1" name="tasktype" class="w-4 h-4" />
+                    <label for="tasktype1">Dates Limit</label>
+                    <input type="radio" id="tasktype2" name="tasktype" class="w-4 h-4" />
+                    <label for="tasktype2">Days Limit</label>
+                </div>
+
+                @* expansion strategy *@
+                <div class="text-white font-semibold mt-2 text-sm">
+                    <div class="mb-1">Expansion Strategy</div>
+                    <select class="input-field w-40">
+                        <option class="bg-[#747474] border-x-1 border-x-white">Shrink</option>
+                        <option class="bg-[#747474] border-x-1 border-x-white">Expand</option>
+                        <option class="bg-[#747474] border-x-1 border-x-white">Shrink / Expand</option>
+                        <option class="bg-[#747474] border-x-1 border-x-white">Fixed</option>
+                    </select>
+                </div>
+
+                @* start date *@
+                <div class="flex flex-row gap-x-4 mt-2 items-end text-white font-semibold text-sm">
+                    @* start date input *@
+                    <div class="basis-3/9">
+                        <div class="mb-1">Start Date</div>
+                        <input type="date" class="input-field w-full" />
+                    </div>
+                    @* connection *@
+                    <div class="basis-4/9">
+                        <div class="mb-1">Connect To</div>
+                        <select class="input-field w-full">
+                            <option class="bg-[#747474] border-x-1 border-x-white">#0 WhenAll *</option>
+                            <option class="bg-[#747474] border-x-1 border-x-white">#1 Inspection</option>
+                        </select>
+                    </div>
+                    @* linking settings *@
+                    <div class="basis-1/9">
+                        <img src="icons/linking.svg" class="w-9 h-9" />
+                    </div>
+                </div>
+
+                @* end date *@
+                <div class="flex flex-row gap-x-4 mt-2 items-end text-white font-semibold text-sm">
+                    @* start date input *@
+                    <div class="basis-3/9">
+                        <div class="mb-1">Length Days</div>
+                        <input type="number" class="input-field w-full" />
+                    </div>
+                    @* connection *@
+                    <div class="basis-4/9">
+                        <div class="mb-1">Connect To</div>
+                        <select class="input-field w-full">
+                            <option class="bg-[#747474] border-x-1 border-x-white">#2 Review</option>
+                            <option class="bg-[#747474] border-x-1 border-x-white">#1 Inspection</option>
+                        </select>
+                    </div>
+                    @* linking settings *@
+                    <div class="basis-1/9">
+                        <img src="icons/linking.svg" class="w-9 h-9" />
+                    </div>
+                </div>
+
+                @* status *@
+                <div class="flex flex-row">
+                    @* left *@
+                    <div class="basis-2/3">
+                        <div class="text-white font-normal mt-2 text-sm">
+                            <div class="mb-1">Status</div>
+                            <div class="flex flex-col gap-y-1">
+                                <label class="flex flex-row gap-x-3 items-center">
+                                    <input type="radio" id="status1" name="status" class="h-4 w-4" />
+                                    <div>Not Started</div>
+                                </label>
+                                <label class="flex flex-row gap-x-3 items-center">
+                                    <input type="radio" id="status2" name="status" class="h-4 w-4" />
+                                    <div>In Progress</div>
+                                    <div class="text-xs font-extralight">cngd by: <span class="font-normal">Marcus Doe</span></div>
+                                </label>
+                                <label class="flex flex-row gap-x-3 items-center">
+                                    <input type="radio" id="status3" name="status" class="h-4 w-4" />
+                                    <div>Completed</div>
+                                    <div class="text-xs font-extralight">cngd by: <span class="font-normal">Marcus Doe</span></div>
+                                </label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    @* right *@
+                    <div class="basis-1/3">
+                        <div class="text-white font-normal mt-2 text-sm">
+                            <div class="mb-1">Level</div>
+                            <input type="number" class="input-field w-20" />
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            @* personnel *@
+            <div class="basis-2/9 px-3">
+                <div class="top-header">Assigned Personnel</div>
+            </div>
+            @* checklist *@
+            <div class="basis-2/9 px-3">
+                <div class="top-header">Checklists</div>
+            </div>
+            @* notes *@
+            <div class="basis-2/9 px-3">
+                <div class="top-header">Notes Board</div>
+            </div>
+        </div>
+    </div>
+</div>
