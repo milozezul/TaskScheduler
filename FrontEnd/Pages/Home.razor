@@ -16,7 +16,7 @@
         @* alerts *@
         <div class="basis-7/18 shrink-0 flex flex-col h-full min-h-0"> 
             <div class="top-header mx-4">Alerts</div>
-            <div class="grow-1 overflow-y-scroll flex flex-col gap-y-1">
+            <div class="grow-1 overflow-y-auto flex flex-col gap-y-1">
                 @* card *@
                 <div class="flex flex-col bg-[#F2F2F2] rounded-md mx-2 px-2 pb-2">
                     <div class="mt-1 text-[10px] font-light">10-20-2030</div>
@@ -53,15 +53,15 @@
     @* right panel *@
     <div class="h-full basis-5/6 flex flex-col">
         @* task header *@
-        <div class="basis-2/18 px-6">
+        <div class="basis-2/18 shrink-0 px-6">
             <div class="top-header">Sapphire App</div>
         </div>
         @* gantt chart *@
-        <div class="basis-9/18 border-2 border-white">
+        <div class="basis-9/18 shrink-0 border-2 border-white">
 
         </div>
         @* settings *@
-        <div class="basis-7/18 flex flex-row">
+        <div class="basis-7/18 shrink-0 flex flex-row min-h-0">
             @* main task settings *@
             <div class="basis-3/9 border-r-2 border-r-white px-6">
 
@@ -169,11 +169,12 @@
                 
             </div>
             @* personnel *@
-            <div class="basis-2/9 px-3">
+            <div class="basis-2/9 px-3 flex flex-col h-full min-h-0">
                 <div class="flex flex-row items-center gap-x-3">
                     <div class="top-header">Assigned Personnel</div>
                     <img src="icons/add.svg" class="w-8 h-8" />
                 </div>
+                @* notifications selector *@
                 <div class="flex flex-row items-end text-white text-xs gap-x-2">
                     <div>Notify Days Before</div>
                     <div class="flex flex-col">
@@ -193,6 +194,125 @@
                         <input type="checkbox" />
                     </div>
                     <input type="text" class="border-2 border-white rounded-[6px] px-2 py-0 w-7 h-6" />
+                </div>
+                @* list of personnel *@
+                <div class="grow overflow-y-auto flex flex-col gap-y-1 mt-1 min-h-0">
+                    @* card *@
+                    <div class="rounded-md bg-[#F8F8F8] flex flex-col px-3 py-2 mr-2 relative">
+                        <div class="text-[#222222]">Marcus Doe</div>
+
+                        <div class="flex flex-row text-xs gap-x-2">
+                            <div class="text-[#0095FF]">john.doe@email.com</div>
+                            <div class="text-[#656565]">(702) 123-1234</div>
+                        </div>
+                        
+                        <div class="text-sm">Inspector</div>
+
+                        <div class="absolute top-0 left-0 h-full w-full flex flex-col">
+                            <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
+                                <img src="icons/email.svg" class="w-4 h-4" />
+                                <img src="icons/phone.svg" class="w-4 h-4" />
+                                <img src="icons/share.svg" class="w-4 h-4" />
+                            </div>
+                            <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
+                                <img src="icons/trash.svg" class="w-5 h-5" />
+                                <img src="icons/edit.svg" class="w-5 h-5" />
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="rounded-md bg-[#F8F8F8] flex flex-col px-3 py-2 mr-2 relative">
+                        <div class="text-[#222222]">Frederic Doe</div>
+
+                        <div class="flex flex-row text-xs gap-x-2">
+                            <div class="text-[#0095FF]">john.doe@email.com</div>
+                            <div class="text-[#656565]">(702) 123-1234</div>
+                        </div>
+
+                        <div class="text-sm">Inspector</div>
+
+                        <div class="absolute top-0 left-0 h-full w-full flex flex-col">
+                            <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
+                                <img src="icons/email.svg" class="w-4 h-4" />
+                                <img src="icons/phone.svg" class="w-4 h-4" />
+                                <img src="icons/share.svg" class="w-4 h-4" />
+                            </div>
+                            <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
+                                <img src="icons/trash.svg" class="w-5 h-5" />
+                                <img src="icons/edit.svg" class="w-5 h-5" />
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="rounded-md bg-[#F8F8F8] flex flex-col px-3 py-2 mr-2 relative">
+                        <div class="text-[#222222]">Chris Doe</div>
+
+                        <div class="flex flex-row text-xs gap-x-2">
+                            <div class="text-[#0095FF]">john.doe@email.com</div>
+                            <div class="text-[#656565]">(702) 123-1234</div>
+                        </div>
+
+                        <div class="text-sm">Inspector</div>
+
+                        <div class="absolute top-0 left-0 h-full w-full flex flex-col">
+                            <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
+                                <img src="icons/email.svg" class="w-4 h-4" />
+                                <img src="icons/phone.svg" class="w-4 h-4" />
+                                <img src="icons/share.svg" class="w-4 h-4" />
+                            </div>
+                            <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
+                                <img src="icons/trash.svg" class="w-5 h-5" />
+                                <img src="icons/edit.svg" class="w-5 h-5" />
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="rounded-md bg-[#F8F8F8] flex flex-col px-3 py-2 mr-2 relative">
+                        <div class="text-[#222222]">Sebastian Doe</div>
+
+                        <div class="flex flex-row text-xs gap-x-2">
+                            <div class="text-[#0095FF]">john.doe@email.com</div>
+                            <div class="text-[#656565]">(702) 123-1234</div>
+                        </div>
+
+                        <div class="text-sm">Inspector</div>
+
+                        <div class="absolute top-0 left-0 h-full w-full flex flex-col">
+                            <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
+                                <img src="icons/email.svg" class="w-4 h-4" />
+                                <img src="icons/phone.svg" class="w-4 h-4" />
+                                <img src="icons/share.svg" class="w-4 h-4" />
+                            </div>
+                            <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
+                                <img src="icons/trash.svg" class="w-5 h-5" />
+                                <img src="icons/edit.svg" class="w-5 h-5" />
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="rounded-md bg-[#F8F8F8] flex flex-col px-3 py-2 mr-2 relative">
+                        <div class="text-[#222222]">Bobby Doe</div>
+
+                        <div class="flex flex-row text-xs gap-x-2">
+                            <div class="text-[#0095FF]">john.doe@email.com</div>
+                            <div class="text-[#656565]">(702) 123-1234</div>
+                        </div>
+
+                        <div class="text-sm">Inspector</div>
+
+                        <div class="absolute top-0 left-0 h-full w-full flex flex-col">
+                            <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
+                                <img src="icons/email.svg" class="w-4 h-4" />
+                                <img src="icons/phone.svg" class="w-4 h-4" />
+                                <img src="icons/share.svg" class="w-4 h-4" />
+                            </div>
+                            <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
+                                <img src="icons/trash.svg" class="w-5 h-5" />
+                                <img src="icons/edit.svg" class="w-5 h-5" />
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
             @* checklist *@

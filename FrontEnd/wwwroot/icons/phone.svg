@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1.060412mm"
+   height="1.060412mm"
+   viewBox="0 0 1.060412 1.0604121"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="phone.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.0386362,-0.82352148)">
+    <path
+       style="fill:none;stroke:#484848;stroke-width:0.07;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.4951163,1.1917924 c -0.00634,-0.045875 -0.1099989,-0.143003 -0.1099989,-0.143003 -0.012465,-0.017048 -0.049241,0.00655 -0.066202,0.022537 -0.019919,0.018782 -0.031755,0.048695 -0.030988,0.076062 0.00341,0.1215533 0.072622,0.2414156 0.1563489,0.3296005 0.078977,0.083181 0.1890937,0.1486062 0.3028381,0.1633917 0.025861,0.00336 0.056743,-7.951e-4 0.076062,-0.018311 0.018039,-0.016358 0.032699,-0.046295 0.023945,-0.069019 -0.00728,-0.018904 -0.1038431,-0.096977 -0.1338121,-0.1014155 -0.020404,-0.00302 -0.040848,0.046482 -0.040848,0.046482 -0.027595,0.032173 -0.1110884,-0.042495 -0.1507145,-0.084232 -0.042979,-0.045269 -0.1040547,-0.1459056 -0.082759,-0.1679846 0.00554,-0.00575 0.060662,-0.021297 0.056128,-0.054108 z"
+       id="path2"
+       sodipodi:nodetypes="ssaaaaasssass" />
+    <circle
+       style="fill:none;stroke:#484848;stroke-width:0.1;stroke-linejoin:round"
+       id="path1"
+       cx="3.5688422"
+       cy="1.3537275"
+       r="0.48020598" />
+  </g>
+</svg>

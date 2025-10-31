@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1.060412mm"
+   height="1.060412mm"
+   viewBox="0 0 1.060412 1.0604121"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="phone.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.0386362,-0.82352148)">
+    <circle
+       style="fill:none;stroke:#484848;stroke-width:0.1;stroke-linejoin:round"
+       id="path1"
+       cx="3.5688422"
+       cy="1.3537275"
+       r="0.48020598"
+       inkscape:export-filename="email.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:none;stroke:#484848;stroke-width:0.07;stroke-linejoin:round;stroke-dasharray:none"
+       id="rect1"
+       width="0.41244313"
+       height="0.33911347"
+       x="3.3626206"
+       y="1.2875694" />
+    <path
+       id="path3"
+       style="fill:none;stroke:#484848;stroke-width:0.07;stroke-linecap:round;stroke-linejoin:round"
+       d="m 3.4407682,1.1986509 c 0.023751,-0.046599 0.072185,-0.078513 0.128074,-0.078513 0.079341,0 0.1436605,0.064319 0.1436605,0.1436605"
+       sodipodi:nodetypes="csc" />
+  </g>
+</svg>
