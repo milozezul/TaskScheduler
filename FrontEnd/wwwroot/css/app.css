@@ -7,7 +7,7 @@
 }
 
 .input-field {
-    @apply border-2 border-white rounded-[6px] px-2 py-0 h-9;
+    @apply border-2 border-white rounded-[6px] px-2 py-0 h-8;
 }
 
 html, body {
