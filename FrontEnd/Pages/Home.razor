@@ -70,58 +70,41 @@
                 <div class="flex flex-row items-center mt-3 gap-x-3">
                     <input type="color" class="w-6 h-7" />
                     <div class="font-normal text-white text-base">#1 Inspection</div>
-                    <img src="icons/success.svg" class="w-5 h-5" />
                 </div>
 
-                @* status *@
-                <div class="flex flex-row">
-                    <div class="text-white mt-2 text-sm">
-                        <div class="flex flex-row items-center gap-x-2">
-                            <div class="mb-1 font-normal">Status</div>
-                            <div class="text-xs font-extralight">cngd by: <span class="font-normal">Marcus Doe</span> 10/20/2030</div>
-                        </div>
-
-                        <div class="flex flex-row gap-x-2 justify-between text-sm font-light">
-                            <label class="flex flex-row gap-x-2 items-center">
-                                <input type="radio" id="status1" name="status" class="h-4 w-4" />
-                                <div>Not Started</div>
-                            </label>
-                            <label class="flex flex-row gap-x-2 items-center">
-                                <input type="radio" id="status2" name="status" class="h-4 w-4" />
-                                <div>In Progress</div>
-                            </label>
-                            <label class="flex flex-row gap-x-2 items-center">
-                                <input type="radio" id="status3" name="status" class="h-4 w-4" />
-                                <div>Completed</div>
-                            </label>
-                        </div>
+                <div class="flex flex-row gap-x-2">
+                    @* status *@
+                    <div class="basis-1/4 text-white font-semibold mt-2 text-sm">
+                        <div class="mb-1">Status</div>
+                        <select class="input-field w-full text-xs">
+                            <option class="bg-gray-400 border-x-1 border-x-white">Not Started</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">In Progress</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">Completed</option>
+                        </select>
                     </div>
-                </div>
-
-                @* task type *@
-                <div class="flex flex-row items-center gap-x-3 text-white text-sm font-light mt-3">
-                    <input type="radio" id="tasktype1" name="tasktype" class="w-4 h-4" />
-                    <label for="tasktype1">Dates Limit</label>
-                    <input type="radio" id="tasktype2" name="tasktype" class="w-4 h-4" />
-                    <label for="tasktype2">Days Limit</label>
-                </div>
-
-                <div class="flex flex-row gap-x-4">
+                    @* type *@
+                    <div class="basis-1/4 text-white font-semibold mt-2 text-sm">
+                        <div class="mb-1">Type</div>
+                        <select class="input-field w-full text-xs">
+                            <option class="bg-gray-400 border-x-1 border-x-white">Dates Limit</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">Days Limit</option>
+                        </select>
+                    </div>
                     @* expansion strategy *@
-                    <div class="text-white font-semibold mt-2 text-sm">
-                        <div class="mb-1">Expansion Strategy</div>
-                        <select class="input-field w-40">
-                            <option class="bg-[#747474] border-x-1 border-x-white">Shrink</option>
-                            <option class="bg-[#747474] border-x-1 border-x-white">Expand</option>
-                            <option class="bg-[#747474] border-x-1 border-x-white">Shrink / Expand</option>
-                            <option class="bg-[#747474] border-x-1 border-x-white">Fixed</option>
+                    <div class="basis-1/4 text-white font-semibold mt-2 text-sm">
+                        <div class="mb-1">Expansion</div>
+                        <select class="input-field w-full text-xs">
+                            <option class="bg-gray-400 border-1 border-white">Shrink</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">Expand</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">Shrink / Expand</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">Fixed</option>
                         </select>
                     </div>
 
                     @* level *@
-                    <div class="text-white font-normal mt-2 text-sm">
+                    <div class="basis-1/4 text-white font-semibold mt-2 text-sm">
                         <div class="mb-1">Level</div>
-                        <input type="number" class="input-field w-20" />
+                        <input type="number" class="input-field w-full text-xs" />
                     </div>
                 </div>
                 
@@ -129,20 +112,20 @@
                 @* start date *@
                 <div class="flex flex-row gap-x-4 mt-2 items-end text-white font-semibold text-sm">
                     @* start date input *@
-                    <div class="basis-3/9">
+                    <div class="basis-1/3 shrink-0 flex flex-col">
                         <div class="mb-1">Start Date</div>
-                        <input type="date" class="input-field w-full" />
+                        <input type="date" class="input-field max-w-full text-xs min-w-0" />
                     </div>
                     @* connection *@
-                    <div class="basis-4/9">
+                    <div class="basis-1/4 shrink-0 flex flex-col">
                         <div class="mb-1">Connect To</div>
-                        <select class="input-field w-full">
-                            <option class="bg-[#747474] border-x-1 border-x-white">#0 WhenAll *</option>
-                            <option class="bg-[#747474] border-x-1 border-x-white">#1 Inspection</option>
+                        <select class="input-field w-full text-xs">
+                            <option class="bg-gray-400 border-x-1 border-x-white">#0 WhenAll *</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">#1 Inspection</option>
                         </select>
                     </div>
                     @* linking settings *@
-                    <div class="basis-1/9">
+                    <div class="basis-1/4">
                         <LinkingIcon />
                     </div>
                 </div>
@@ -150,25 +133,127 @@
                 @* end date *@
                 <div class="flex flex-row gap-x-4 mt-2 items-end text-white font-semibold text-sm">
                     @* start date input *@
-                    <div class="basis-3/9">
+                    <div class="basis-1/3 shrink-0 flex flex-col">
                         <div class="mb-1">Length Days</div>
-                        <input type="number" class="input-field w-full" />
+                        <input type="number" class="input-field w-full text-xs" />
                     </div>
                     @* connection *@
-                    <div class="basis-4/9">
+                    <div class="basis-1/4 shrink-0 flex flex-col">
                         <div class="mb-1">Connect To</div>
-                        <select class="input-field w-full">
-                            <option class="bg-[#747474] border-x-1 border-x-white">#2 Review</option>
-                            <option class="bg-[#747474] border-x-1 border-x-white">#1 Inspection</option>
+                        <select class="input-field w-full text-xs">
+                            <option class="bg-gray-400 border-x-1 border-x-white">#2 Review</option>
+                            <option class="bg-gray-400 border-x-1 border-x-white">#1 Inspection</option>
                         </select>
                     </div>
                     @* linking settings *@
-                    <div class="basis-1/9">
+                    <div class="basis-1/4">
                         <LinkingIcon />
                     </div>
                 </div>
 
                 
+            </div>
+            @* checklist *@
+            <div class="basis-2/9 flex flex-col h-full min-h-0">
+                <div class="flex flex-row items-center gap-x-3 mt-1 px-2">
+                    <div class="top-header">Checklists</div>
+                    <AddIcon />
+                </div>
+                @* progress bar *@
+                <div class="flex flex-row text-white text-xs font-semibold items-center gap-x-2 px-2">
+                    <img src="icons/check.svg" class="w-3 h-3" />
+                    <div>3/5</div>
+                    <div class="flex flex-row bg-[#fbfbfb] w-full h-[9px] p-[2px] rounded-lg mr-10">
+                        <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
+                    </div>
+                </div>
+
+                <div class="flex flex-row items-center gap-x-2 px-2">
+                    <input type="checkbox" />
+                    <div class="text-xs text-white">Complete with last Check</div>
+                </div>
+
+                @* list of checklists *@
+                <div class="grow overflow-y-scroll flex flex-col gap-y-1 mt-1 min-h-0 [scrollbar-gutter:stable] px-2 py-1">
+                    @* card *@
+                    <div class="bg-neutral-700 text-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-3 hover:outline-blue-300 cursor-pointer">
+                        <div class="flex flex-row items-center gap-x-4">
+                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
+                                <img src="icons/success.svg" class="w-6 h-6" />
+                            </div>
+                            <div class="font-semibold">Initial Setup</div>
+                        </div>
+                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
+                            <img src="icons/check.svg" class="w-3 h-3" />
+                            <div>3/5</div>
+                            <div class="flex flex-row bg-neutral-800 w-full h-[9px] p-[2px] rounded-lg">
+                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="bg-neutral-700 text-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-3 hover:outline-blue-300 cursor-pointer">
+                        <div class="flex flex-row items-center gap-x-4">
+                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
+                            </div>
+                            <div class="font-semibold">Review</div>
+                        </div>
+                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
+                            <img src="icons/check.svg" class="w-3 h-3" />
+                            <div>3/5</div>
+                            <div class="flex flex-row bg-neutral-800 w-full h-[9px] p-[2px] rounded-lg">
+                                <div class="basis-8/9 bg-[#00D560] rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="bg-neutral-700 text-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-3 hover:outline-blue-300 cursor-pointer">
+                        <div class="flex flex-row items-center gap-x-4">
+                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
+                                <img src="icons/success.svg" class="w-6 h-6" />
+                            </div>
+                            <div class="font-semibold">Inspection</div>
+                        </div>
+                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
+                            <img src="icons/check.svg" class="w-3 h-3" />
+                            <div>3/5</div>
+                            <div class="flex flex-row bg-neutral-800 w-full h-[9px] p-[2px] rounded-lg">
+                                <div class="basis-9/9 bg-[#00D560] rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="bg-neutral-700 text-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-3 hover:outline-blue-300 cursor-pointer">
+                        <div class="flex flex-row items-center gap-x-4">
+                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
+                            </div>
+                            <div class="font-semibold">Corrections</div>
+                        </div>
+                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
+                            <img src="icons/check.svg" class="w-3 h-3" />
+                            <div>3/5</div>
+                            <div class="flex flex-row bg-neutral-800 w-full h-[9px] p-[2px] rounded-lg">
+                                <div class="basis-5/9 bg-[#00D560] rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    @* card *@
+                    <div class="bg-neutral-700 text-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-3 hover:outline-blue-300 cursor-pointer">
+                        <div class="flex flex-row items-center gap-x-4">
+                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
+                            </div>
+                            <div class="font-semibold">Finalize</div>
+                        </div>
+                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
+                            <img src="icons/check.svg" class="w-3 h-3" />
+                            <div>3/5</div>
+                            <div class="flex flex-row bg-neutral-800 w-full h-[9px] p-[2px] rounded-lg">
+                                <div class="basis-6/9 bg-[#00D560] rounded-lg"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
             @* personnel *@
             <div class="basis-2/9 flex flex-col h-full min-h-0">
@@ -200,15 +285,15 @@
                 @* list of personnel *@
                 <div class="grow overflow-y-scroll flex flex-col gap-y-1 mt-1 min-h-0 [scrollbar-gutter:stable] px-2 py-1">
                     @* card *@
-                    <div class="rounded-md bg-[#FFFFFF] flex flex-col px-3 py-1 relative hover:outline-2 hover:outline-blue-400">
-                        <div class="text-[#222222]">Marcus Doe</div>
+                    <div class="rounded-md bg-neutral-700 flex flex-col px-3 py-1 relative hover:outline-3 hover:outline-blue-300">
+                        <div class="text-white">Marcus Doe</div>
 
                         <div class="flex flex-row text-xs gap-x-2">
-                            <div class="text-sky-700">john.doe@email.com</div>
-                            <div class="text-gray-600">(702) 123-1234</div>
+                            <div class="text-sky-300">john.doe@email.com</div>
+                            <div class="text-gray-100">(702) 123-1234</div>
                         </div>
                         
-                        <div class="text-sm">Inspector</div>
+                        <div class="text-sm text-white">Inspector</div>
 
                         <div class="absolute top-0 left-0 h-full w-full flex flex-col">
                             <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
@@ -218,20 +303,20 @@
                             </div>
                             <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
                                 <EditIcon Size="15" />
-                                <CloseIcon Size="15" Color="#ff6363" />
+                                <CloseIcon Size="15" Color="#9e4139" />
                             </div>
                         </div>
                     </div>
                     @* card *@
-                    <div class="rounded-md bg-[#FFFFFF] flex flex-col px-3 py-1 relative hover:outline-2 hover:outline-blue-400">
-                        <div class="text-[#222222]">Frederic Doe</div>
+                    <div class="rounded-md bg-neutral-700 flex flex-col px-3 py-1 relative hover:outline-3 hover:outline-blue-300">
+                        <div class="text-white">Marcus Doe</div>
 
                         <div class="flex flex-row text-xs gap-x-2">
-                            <div class="text-sky-700">john.doe@email.com</div>
-                            <div class="text-gray-600">(702) 123-1234</div>
+                            <div class="text-sky-300">john.doe@email.com</div>
+                            <div class="text-gray-100">(702) 123-1234</div>
                         </div>
-
-                        <div class="text-sm">Inspector</div>
+                        
+                        <div class="text-sm text-white">Inspector</div>
 
                         <div class="absolute top-0 left-0 h-full w-full flex flex-col">
                             <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
@@ -241,20 +326,20 @@
                             </div>
                             <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
                                 <EditIcon Size="15" />
-                                <CloseIcon Size="15" Color="#ff6363" />
+                                <CloseIcon Size="15" Color="#9e4139" />
                             </div>
                         </div>
                     </div>
                     @* card *@
-                    <div class="rounded-md bg-[#FFFFFF] flex flex-col px-3 py-1 relative hover:outline-2 hover:outline-blue-400">
-                        <div class="text-[#222222]">Chris Doe</div>
+                    <div class="rounded-md bg-neutral-700 flex flex-col px-3 py-1 relative hover:outline-3 hover:outline-blue-300">
+                        <div class="text-white">Marcus Doe</div>
 
                         <div class="flex flex-row text-xs gap-x-2">
-                            <div class="text-sky-700">john.doe@email.com</div>
-                            <div class="text-gray-600">(702) 123-1234</div>
+                            <div class="text-sky-300">john.doe@email.com</div>
+                            <div class="text-gray-100">(702) 123-1234</div>
                         </div>
-
-                        <div class="text-sm">Inspector</div>
+                        
+                        <div class="text-sm text-white">Inspector</div>
 
                         <div class="absolute top-0 left-0 h-full w-full flex flex-col">
                             <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
@@ -264,20 +349,20 @@
                             </div>
                             <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
                                 <EditIcon Size="15" />
-                                <CloseIcon Size="15" Color="#ff6363" />
+                                <CloseIcon Size="15" Color="#9e4139" />
                             </div>
                         </div>
                     </div>
                     @* card *@
-                    <div class="rounded-md bg-[#FFFFFF] flex flex-col px-3 py-1 relative hover:outline-2 hover:outline-blue-400">
-                        <div class="text-[#222222]">Marcus Doe</div>
+                    <div class="rounded-md bg-neutral-700 flex flex-col px-3 py-1 relative hover:outline-3 hover:outline-blue-300">
+                        <div class="text-white">Marcus Doe</div>
 
                         <div class="flex flex-row text-xs gap-x-2">
-                            <div class="text-sky-700">john.doe@email.com</div>
-                            <div class="text-gray-600">(702) 123-1234</div>
+                            <div class="text-sky-300">john.doe@email.com</div>
+                            <div class="text-gray-100">(702) 123-1234</div>
                         </div>
-
-                        <div class="text-sm">Inspector</div>
+                        
+                        <div class="text-sm text-white">Inspector</div>
 
                         <div class="absolute top-0 left-0 h-full w-full flex flex-col">
                             <div class="grow-1 flex flex-row justify-end gap-x-2 pt-1 px-2">
@@ -287,7 +372,7 @@
                             </div>
                             <div class="grow-1 flex flex-row items-end justify-end gap-x-2 pb-1 px-2">
                                 <EditIcon Size="15" />
-                                <CloseIcon Size="15" Color="#ff6363" />
+                                <CloseIcon Size="15" Color="#9e4139" />
                             </div>
                         </div>
                     </div>
@@ -295,123 +380,7 @@
 
                 </div>
             </div>
-            @* checklist *@
-            <div class="basis-2/9 flex flex-col h-full min-h-0 border-x-2 border-x-white">
-                <div class="flex flex-row items-center gap-x-3 mt-1 px-2">
-                    <div class="top-header">Checklists</div>
-                    <AddIcon />
-                </div>
-                @* progress bar *@
-                <div class="flex flex-row text-white text-xs font-semibold items-center gap-x-2 px-2">
-                    <img src="icons/check.svg" class="w-3 h-3" />
-                    <div>3/5</div>
-                    <div class="flex flex-row bg-[#fbfbfb] w-full h-[9px] p-[2px] rounded-lg mr-10">
-                        <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                    </div>
-                </div>
-
-                <div class="flex flex-row items-center gap-x-2 px-2">
-                    <input type="checkbox" />
-                    <div class="text-xs text-white">Complete with last Check</div>
-                </div>
-
-                @* list of checklists *@
-                <div class="grow overflow-y-scroll flex flex-col gap-y-1 mt-1 min-h-0 [scrollbar-gutter:stable] px-2 py-1">
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400 cursor-pointer">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                                <img src="icons/success.svg" class="w-6 h-6" />
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400 cursor-pointer">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                                <img src="icons/success.svg" class="w-6 h-6" />
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400 cursor-pointer">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400 cursor-pointer">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400 cursor-pointer">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-                    @* card *@
-                    <div class="bg-white rounded-md flex flex-col px-2 py-2 gap-y-1 hover:outline-2 hover:outline-blue-400">
-                        <div class="flex flex-row items-center gap-x-4">
-                            <div class="bg-[#aeaeae] rounded-full p-[2px] w-7 h-7">
-                            </div>
-                            <div class="font-semibold">Initial Setup</div>
-                        </div>
-                        <div class="flex flex-row text-xs font-semibold items-center gap-x-2">
-                            <img src="icons/checkBlack.svg?v=2" class="w-3 h-3" />
-                            <div>3/5</div>
-                            <div class="flex flex-row bg-[#dbdbdb] w-full h-[9px] p-[2px] rounded-lg">
-                                <div class="basis-3/9 bg-[#00D560] rounded-lg"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            
             @* notes *@
             <div class="basis-2/9 flex flex-col min-h-0">
                 <div class="top-header px-2">Notes Board</div>
@@ -424,55 +393,55 @@
                     </div>
                     
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">Client meeting rescheduled — new timeline discussed and approved by supervisor.</div>
                     </div>
 
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">Design prototype finalized and handed off to QA team for initial testing phase.</div>
                     </div>
 
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">Database migration completed successfully — all production data verified.</div>
                     </div>
 
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">Unexpected downtime due to network maintenance — all affected systems restored by noon.</div>
                     </div>
 
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">New access credentials distributed to project team after security review.</div>
                     </div>
 
                     @* card *@
-                    <div class="flex flex-col bg-white rounded-md px-2 pb-2">
+                    <div class="flex flex-col bg-neutral-700 text-white rounded-md px-2 pb-2">
                         <div class="flex flex-row items-center justify-between mt-1">
-                            <div class="text-[10px] font-light">10-18-2030</div>
-                            <CloseIcon Size="15" Color="#ff8383" />
+                            <div class="text-[10px] font-light text-gray-300">10-18-2030</div>
+                            <CloseIcon Size="15" Color="#9e4139" />
                         </div>
                         <div class="mt-1 text-sm/4 font-light">Final presentation prepared — pending approval from department head before client delivery.</div>
                     </div>
