@@ -1,0 +1,31 @@
+﻿<div>
+    <svg width="1.0311974mm"
+         height="1.0311974mm"
+         viewBox="0 0 1.0311974 1.0311974"
+         id="cancelicon"
+         style="width:@(Size)px;height:@(Size)px;"
+         class="hover:scale-[1.1]"
+    >
+        <g id="layer1"
+           transform="translate(-6.7196235,-5.2769412)"
+           style="fill:@Color;fill-opacity:1">
+            <circle style="fill:@Color;fill-opacity:1;stroke:none;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                    cx="9.212019"
+                    cy="-1.0201304"
+                    r="0.51559871"
+                    transform="rotate(45)" />
+            <path style="fill:@Color;fill-opacity:1;stroke:#ffffff;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="M 7.4018887,5.6258735 7.063347,5.9644152" />
+            <path style="fill:@Color;fill-opacity:1;stroke:#ffffff;stroke-width:0.15;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+                  d="M 7.4018887,5.9644152 7.063347,5.6258735" />
+        </g>
+    </svg>
+</div>
+
+@code {
+    [Parameter]
+    public string Color { get; set; }
+
+    [Parameter]
+    public int Size { get; set; }
+}

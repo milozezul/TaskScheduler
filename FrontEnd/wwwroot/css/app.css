@@ -7,7 +7,15 @@
 }
 
 .input-field {
-    @apply border-2 border-white rounded-[6px] px-2 py-0 h-8;
+    @apply border-2 border-white rounded-[6px] px-2 py-0 h-7;
+}
+
+input:focus {
+    outline: none;
+}
+
+select:focus {
+    outline: none;
 }
 
 html, body {
