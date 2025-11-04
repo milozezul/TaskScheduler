@@ -7,12 +7,54 @@
     @* left panel *@
     <div class="h-full basis-1/6 shrink-0 flex flex-col border-r-2 border-r-white">
         @* tool bar *@
-        <div class="basis-1/18 shrink-0">
-
+        <div class="grow shrink-0 px-2 py-2 flex flex-col justify-between">
+            <div class="flex flex-row gap-x-4 items-center">
+                <div class="w-12 h-12 bg-blue-800 rounded-full border-2 border-white text-white font-semibold items-center justify-center flex flex-row">
+                    <div>MD</div>
+                </div>
+                <div class="flex flex-col">
+                    <div class="text-sm font-semibold text-white">Marcus Doe</div>
+                    <div class="text-sm text-blue-200">marcus.doe@gmail.com</div>
+                </div>
+            </div>
+            <div class="flex flex-row justify-between items-center w-full">
+                <div>
+                    <AddIcon />
+                </div>
+                <select class="input-field text-white text-sm w-[50%]">
+                    <option>Category</option>
+                </select>
+            </div>
         </div>
         @* explorer *@
-        <div class="basis-10/18 shrink-0 border-1 border-[#A4A4A4] bg-[#5B5B5B] mx-2">
+        <div class="basis-9/18 shrink-0 border-1 border-[#A4A4A4] bg-[#5B5B5B] mx-2 min-h-0 overflow-y-auto">
+            <div class="flex flex-col py-1 ">
+                @* card *@
+                <div class="flex flex-row items-center justify-between select-none hover:bg-gray-500 px-2">
+                    <div class="flex flex-row items-center gap-x-2">
+                        <img src="icons/record.svg" class="w-4 h-4" />
+                        <div class="text-white text-sm">Sapphire App</div>
+                    </div>
+                    <img src="icons/star.svg" class="w-4 h-4" />
+                </div>
+                @* card *@
+                <div class="flex flex-row items-center justify-between select-none hover:bg-gray-500 px-2">
+                    <div class="flex flex-row items-center gap-x-2">
+                        <img src="icons/record.svg" class="w-4 h-4" />
+                        <div class="text-white text-sm">Bounceback App</div>
+                    </div>
+                    <img src="icons/star.svg" class="w-4 h-4" />
+                </div>
+                @* card *@
+                <div class="flex flex-row items-center justify-between select-none hover:bg-gray-500 px-2">
+                    <div class="flex flex-row items-center gap-x-2">
+                        <img src="icons/record.svg" class="w-4 h-4" />
+                        <div class="text-white text-sm">Clover App</div>
+                    </div>
+                    <img src="icons/star.svg" class="w-4 h-4" />
+                </div>
 
+            </div>
         </div>
         @* alerts *@
         <div class="basis-7/18 shrink-0 flex flex-col h-full min-h-0"> 
@@ -54,10 +96,10 @@
     @* right panel *@
     <div class="h-full basis-5/6 flex flex-col">
         @* task header *@
-        <div class="basis-2/18 shrink-0 px-6 flex flex-row">
+        <div class="px-6 py-2 flex flex-row">
             <div class="basis-1/4">
                 @* title *@
-                <div class="flex flex-row items-center gap-x-2 mt-2">
+                <div class="flex flex-row items-center gap-x-2">
                     <div class="top-header">Sapphire App</div>
                     <EditIcon Size="20" />
                 </div>
@@ -71,15 +113,25 @@
                 </div>
             </div>
             @* tools panel *@
-            <div class="basis-1/4">
-                <div class="flex flex-row mt-2 text-white font-semibold text-sm">
+            <div class="basis-1/4 px-4">
+                <div class="top-header">Task Tools</div>
+                <div class="flex flex-row text-white font-semibold text-xs gap-x-1">
                     <button class="border-2 border-white rounded-sm px-2 py-1 hover:bg-white hover:text-gray-900">ADD TASK</button>
+                    <button class="border-2 border-white rounded-sm px-2 py-1 hover:bg-white hover:text-gray-900">REFRESH</button>
+                    <button class="border-2 border-red-300 rounded-sm px-2 py-1 text-red-300 hover:bg-red-300 hover:text-gray-900">DELETE PRJ</button>
                 </div>
             </div>
-            
+            @* statistics *@
+            <div class="basis-1/4 px-4">
+                <div class="top-header">Project Status</div>
+                <div class="flex flex-row gap-x-2 text-sm">
+                    <div class="text-green-300">Completed: 10/<span class="text-yellow-300">5</span>/20</div>
+                    <div class="text-red-300">Due Today: 10/<span class="text-red-400">0</span></div>
+                </div>
+            </div>
         </div>
         @* gantt chart *@
-        <div class="basis-9/18 shrink-0 border-2 border-white">
+        <div class="grow shrink-0 border-2 border-white">
 
         </div>
         @* settings *@
